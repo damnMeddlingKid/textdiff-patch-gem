@@ -10,9 +10,9 @@ module TextDiffPatch
       when -1
         index += value
       when 0
-        result += old[index, index += value]
+        result.concat old[index, index += value]
       when 1
-        result += value
+        result.concat value
       end
     end
 
