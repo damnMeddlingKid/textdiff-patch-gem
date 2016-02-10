@@ -9,13 +9,13 @@ module TextDiffPatch
 
       case operation
       when -1
-        index++
+        index += value
       when 0
-        result += old[index,index+=value]
+        result += old[index, index += value]
       when 1
         result += value
       end
-      
+
     end
 
     result
