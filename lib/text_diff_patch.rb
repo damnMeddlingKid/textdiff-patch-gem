@@ -1,12 +1,11 @@
 module TextDiffPatch
-	def TextDiffPatch.patch(old, delta)
+  def TextDiffPatch.patch(old, delta)
     result = ''
     index = 0
 
     delta.each do |item|
       operation = item[0]
       value = item[1]
-
       case operation
       when -1
         index += value
@@ -15,9 +14,8 @@ module TextDiffPatch
       when 1
         result += value
       end
-
     end
 
     result
-	end
+  end
 end
